@@ -18,7 +18,7 @@ const isDog = function(pet){
  	return pet.type === 'dog';
 }
 const dogs = pets.filter(isDog);
-console.log(pets);
+console.log(dogs);
 
 const hisName = function (pet){
 	return pet.name == 'Jasper';
