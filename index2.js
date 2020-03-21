@@ -1,28 +1,14 @@
 const pets = [
-  { name: 'Max', type: 'dog', bornOn: 2018 },
-  { name: 'Angel', type: 'cat', bornOn: 2015 },
-  { name: 'Jasper', type: 'dog', bornOn: 2016 }
-];
-
-function getAge(pet) {
-  return new Date().getFullYear() - pet.bornOn;
-}
-
-const isAge = function (pet){
-	return pet.age =getAge(pet);
-}
-const petsWithAge = pets.map(isAge);
-console.log(petsWithAge);
-
-const isDog = function(pet){
- 	return pet.type === 'dog';
-}
-const dogs = pets.filter(isDog);
-console.log(dogs);
-
-const hisName = function (pet){
-	return pet.name == 'Jasper';
-}
-const jasper = pets.find(hisName);
-
-console.log("Jasper is " + jasper.age + " years old");
+    { name: 'Max', type: 'dog', bornOn: 2018 },
+    { name: 'Angel', type: 'cat', bornOn: 2015 },
+    { name: 'jasper', type: 'dog', bornOn: 2016 }
+  ];
+  const getAge = pet=>{
+    return new Date().getFullYear() - pet.bornOn
+    };
+    pets.forEach((pet)=>{ pet.age = getAge(pet)})
+    console.log("pets With Age", pets);
+  const dogs = pets.filter(pet => pet.type === "dog")
+  console.log(dogs)
+  const a = pets.find(a => a.name == 'jasper')
+  console.log(a)
